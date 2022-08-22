@@ -4,5 +4,5 @@ class Experience < ApplicationRecord
 
   validates :title, :description, :location, :price, :start_date, :end_date, presence: true
   validates :title, uniqueness: true
-  validates :start_date, comparison: { less_than: :end_date }
+  
 end
