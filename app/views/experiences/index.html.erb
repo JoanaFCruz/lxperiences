@@ -4,15 +4,11 @@
 
   <% @experiences.each do |experience|%>
     <ul>
-      <li><strong>Title: </strong><%= experience.title %></li>
-      <li><strong>Description: </strong><%= experience.description %></li>
-      <li><strong>Location: </strong><%= experience.location %></li>
-      <li><strong>Price: </strong><%= experience.price %></li>
+      <li><strong><%= experience.title %></strong></li>
+      <li><strong></strong><%= experience.location %></li>
+      <li><strong></strong><%= experience.price %></li>
       <br>
     </ul>
   <% end %>
-
-
-<%#= render "experiences/list", experiences: @experiences %>
 
 <%= link_to "New experience", new_experience_path %>
