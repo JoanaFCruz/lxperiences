@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_experience, only: [:new, :create]
-  before_action :set_booking, only: [:show]
+  before_action :set_booking, only: [:show, :destroy]
 
   def index
   end
@@ -13,6 +13,10 @@ class BookingsController < ApplicationController
   end
 
   def create
+
+  end
+
+  def destroy
 
   end
 
