@@ -1,14 +1,19 @@
 <h1>LXperiences</h1>
 <p>The app to discover the most fun part of Lisbon and regions</p>
 
-
+<div>
   <% @experiences.each do |experience|%>
     <ul>
       <li><strong><%= experience.title %></strong></li>
       <li><strong></strong><%= experience.location %></li>
-      <li><strong></strong><%= experience.price %></li>
+      <li><strong></strong><%= experience.price %> eur</li>
       <br>
     </ul>
   <% end %>
+</div>
 
-<%= link_to "New experience", new_experience_path %>
+<br>
+
+<div>
+  <%= link_to "New experience", new_experience_path if policy(Experience).new? %>
+</div>
