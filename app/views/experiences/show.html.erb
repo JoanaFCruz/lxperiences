@@ -1,8 +1,18 @@
-<h1>Experiences#show</h1>
+<h4>LXperience</h4>
+
+<br>
 
 <div>
-<h2><strong><%=@experience.title  %></strong></h2>
-<p><%= @experience.description %></p>
-<p><%= @experience.location %></p>
-<p><%= @experience.price %> EUR</p>
+  <h2><strong><%=@experience.title  %></strong></h2>
+  <p><%= @experience.description %></p>
+  <p><%= @experience.location %></p>
+  <p><%= @experience.price %> eur</p>
+</div>
+
+<div>
+  <%= link_to "New experience", new_experience_path if policy(Experience).new? %>
+</div>
+
+<div>
+  <%= button_to "Destroy this experience", @experience, method: :delete %>
 </div>
