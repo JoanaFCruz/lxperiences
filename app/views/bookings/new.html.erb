@@ -1,2 +1,7 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<h1>Book the experience <strong><%= @experience.title %></strong></h1>
+<br>
+<%= simple_form_for [@experience, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit "Book experience" %>
+<% end %>

@@ -1,0 +1,14 @@
+<h1>Your booked experience</h1>
+
+<div>
+<h2><strong><%=@booking.experience.title  %></strong></h2>
+<p><%= @booking.experience.description %></p>
+<p><%= @booking.experience.location %></p>
+<p><%= @booking.experience.price %> EUR</p>
+<p><%= @booking.start_date.to_formatted_s(:short) %></p>
+<p><%= @booking.end_date.to_formatted_s(:short) %></p>
+<%= link_to "Cancel your booking",
+      booking_path(@booking),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
+</div>
