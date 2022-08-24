@@ -1,9 +1,23 @@
 // Specific CSS for your home-page
-.page-top-margin {
-  margin: 100px 100px 50px;
-}
 
-.link {
-  text-decoration: none;
-  color: $rich-black;
+.banner {
+  background-image: asset_url("background.png");
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+
+  h1 {
+    background-color: $mykado-yellow;
+    height: fit-content;
+    width: fit-content;
+    padding: 3px;
+  }
+
+  p {
+    background-color: $mykado-yellow;
+    height: fit-content;
+    width: fit-content;
+    font-size: 150%;
+    padding: 10px;
+  }
 }
