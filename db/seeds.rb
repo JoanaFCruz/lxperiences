@@ -50,13 +50,13 @@ sentido_proibido = {
 bolder = {
   title: "Bolder in Ericeira",
   description: "Open air boldering in Ericeira with a view",
-  location: "Ribamar, Ericeira",
+  location: "Ribamar, Lisboa",
   price: 20,
   user: users.sample}
 jeep = {
   title: "Jeep Safari Tour",
   description: "Thrilling jeep safari tour for 2 people",
-  location: "Rua Pé de Mouro, Linhó, Sintra",
+  location: "Rua Pé de Mouro, Sintra",
   price: 185,
   user: users.sample}
 speadboat = {
