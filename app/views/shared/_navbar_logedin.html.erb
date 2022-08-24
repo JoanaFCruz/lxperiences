@@ -1,4 +1,34 @@
 
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <div class="col-4">
+      <%= link_to root_path do %>
+        <i class="fa-solid fa-crow"></i>
+      <% end %>
+     </div>
+
+    <div class="col-7 d-flex justify-content-left">
+      <h1><%= link_to "LXperiences", experiences_path, class: 'navbar-link' %></h1>
+    </div>
+
+    <div class="collapse navbar-collapse col-1" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "My bookings", bookings_path, class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+            </div>
+          </li>
+        <%# else %>
+          <!--li class="nav-item"-->
+            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <!--/li-->
+        <%# end %>
+      </ul>
+    </div>
+  </div>
+</div>
 
 
 
@@ -6,12 +36,12 @@
 
 <%# <div class='navbar sticky'> %>
   <%# <div class="col-2"> %>
-    <%# <%= link_to root_path do %> %>
+    <%# <%= link_to root_path do %>
       <%# <i class="fa-solid fa-crow"></i> %>
-    <%# <% end %> %>
+    <%# <% end %>
   <%# </div> %>
 
   <%# <div class="col-6 d-flex justify-content-center"> %>
-    <h1><%= link_to "LXperiences", experiences_path, class: 'navbar-link' %></h1>
-  </div>
-</div>
+    <%# <h1><%= link_to "LXperiences", experiences_path, class: 'navbar-link' %>
+  <%# </div> %>
+<%# </div> %>

@@ -11,8 +11,12 @@
   </head>
 
   <body>
-    <%# fazer each do para nav logged e não logged %>
-    <%= render "shared/navbar" %>
+    <% if user_signed_in? %>
+      <%= render "shared/navbar_logedin" %>
+    <% else %>
+      <%= render "shared/navbar" %>
+    <% end %>
+
     <%= yield %>
 
     <%= render "shared/footer" %>
