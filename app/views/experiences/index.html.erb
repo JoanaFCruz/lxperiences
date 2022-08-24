@@ -1,18 +1,19 @@
 <h1>Discover our LXperiences</h1>
 <p>The app to discover the most fun part of Lisbon and regions</p>
 
-<div>
-  <% @experiences.each do |experience|%>
-    <ul>
-      <li><strong><%= link_to experience.title, experience_path(experience) %></strong></li>
-      <li><strong></strong><%= experience.location %></li>
-      <li><strong></strong><%= experience.price %> eur</li>
-      <br>
-    </ul>
-  <% end %>
+<% @experiences.each do |experience|%>
+
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2><strong><%= link_to experience.title, experience_path(experience) %></strong></h2>
+    <p><%= experience.location %></p>
+    <p><%= experience.price %> eur</p>
+  </div>
 </div>
 
-<br>
+<% end %>
+
 
 <div>
   <%= link_to "Add new experience", new_experience_path if policy(Experience).new? %>
