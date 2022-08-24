@@ -53,20 +53,20 @@ bolder = {
   location: "Ribamar, Ericeira",
   price: 20,
   user: users.sample}
-hot_air_baloon = {
-  title: "Hot Air Baloon in Alqueva River",
-  description: "Hot Air Baloon experience with beautiful view over Alqueva River",
-  location: "Monsaraz, Alentejo",
+jeep = {
+  title: "Jeep Safari Tour",
+  description: "Thrilling jeep safari tour for 2 people",
+  location: "Rua Pé de Mouro, Linhó, Sintra",
   price: 185,
   user: users.sample}
-aquashow = {
-  title: "Aquashow Water Park",
-  description: "A water park for families to have fun",
-  location: "Quarteira, Algarve",
-  price: 21,
+speadboat = {
+  title: "Speedboat in Tagus River",
+  description: "45 minutes Speedboat experience in Tagus river for a group of friends",
+  location: "Doca de Santo Amaro, Lisboa",
+  price: 50,
   user: users.sample}
 
-[torel_swimming_pool, sentido_proibido, bolder, hot_air_baloon, aquashow].each do |attributes|
+[torel_swimming_pool, sentido_proibido, bolder, jeep, speadboat].each do |attributes|
   experience = Experience.create!(attributes)
   puts "Created #{experience.title}"
 end

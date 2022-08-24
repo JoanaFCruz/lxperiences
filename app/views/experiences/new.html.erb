@@ -1,4 +1,12 @@
 <div class='page-top-margin'>
-  <h1>Experiences#new</h1>
-  <p>Find me in app/views/experiences/new.html.erb</p>
+ 
+  <h1>Add new experience </h1>
+  <br>
+  <%= render "form", experience: @experience %>
+  <br>
+
+  <div>
+    <%= link_to "Back to experiences", experiences_path %>
+  </div>
+
 </div>
