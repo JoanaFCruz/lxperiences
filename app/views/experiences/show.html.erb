@@ -10,9 +10,13 @@
 </div>
 
 <div>
-  <%= link_to "New experience", new_experience_path if policy(Experience).new? %>
+<%= link_to "Book this experience", new_experience_booking_path(@experience) %>
 </div>
 
 <div>
-  <%= button_to "Destroy this experience", @experience, method: :delete %>
+  <%= button_to "Delete this experience", @experience, method: :delete %>
+</div>
+
+<div>
+  <%= link_to "New experience", new_experience_path if policy(Experience).new? %>
 </div>
