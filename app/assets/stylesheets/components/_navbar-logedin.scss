@@ -2,7 +2,7 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: $mykado-yellow;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -99,17 +99,6 @@
       transition: 0.15s;
     }
   }
-
-  .sign-up {
-    background-color: $peach-crayola;
-    margin-left: 10px
-  }
-
-  .login {
-    background-color: $mykado-yellow;
-    margin-right: 10px;
-  }
-
 
   .fa-crow {
     font-size: xx-large;

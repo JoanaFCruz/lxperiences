@@ -8,11 +8,11 @@
   <p><%= @experience.location %></p>
   <p><%= @experience.price %> eur</p>
 </div>
-
+<br>
 <div>
 <%= link_to "Book this experience", new_experience_booking_path(@experience) %>
 </div>
-
+<br>
 <div>
   <%= button_to "Delete this experience", @experience, method: :delete %>
 </div>
