@@ -4,6 +4,13 @@ class ExperiencesController < ApplicationController
   def index
     @experiences = Experience.all
     @experiences = policy_scope(Experience)
+    @markers = @experiences.geocoded.map do |experience|
+      {
+        lat: experience.latitude,
+        lng: experience.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {experience: experience})
+      }
+    end
   end
 
   def show
