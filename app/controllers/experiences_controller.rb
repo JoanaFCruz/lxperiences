@@ -8,7 +8,8 @@ class ExperiencesController < ApplicationController
       {
         lat: experience.latitude,
         lng: experience.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {experience: experience})
+        info_window: render_to_string(partial: "info_window", locals: {experience: experience}),
+        image_url: helpers.asset_url("crow-solid.png")
       }
     end
   end
