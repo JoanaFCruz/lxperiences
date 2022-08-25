@@ -10,12 +10,14 @@
         <div class="row">
           <div class="col-md-6">
             <%= f.input :first_name,
+                        error: 'First name is mandatory, please specify one',
                         required: true,
                         autofocus: true,
                         input_html: { autocomplete: "first-name" }%>
           </div>
           <div class="col-md-6">
           <%= f.input :last_name,
+                      error: 'Last name is mandatory, please specify one',
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "last-name" }%>
@@ -30,10 +32,12 @@
                       autofocus: true,
                       input_html: { autocomplete: "dob" }%>
           <%= f.input :email,
+                      error: 'A valid email is mandatory, please specify one',
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "email" }%>
           <%= f.input :password,
+                      error: 'A valid password is mandatory, please specify one',
                       required: true,
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
