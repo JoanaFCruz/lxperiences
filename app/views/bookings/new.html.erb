@@ -1,4 +1,4 @@
-<h1>Book the experience <strong><%= @experience.title %></strong></h1>
+<h1><strong>Book </strong><%= @experience.title %></h1>
 <br>
 <%= simple_form_for [@experience, @booking] do |f| %>
   <%= f.input :start_date %>
