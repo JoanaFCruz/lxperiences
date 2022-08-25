@@ -1,0 +1,46 @@
+.card-booked {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 70px;
+
+  img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+}
+
+.btn-cancel {
+  border-radius: 30px;
+  border-bottom-width: 5px;
+  border-right-width: 1px;
+  border-color: #090B0B;
+  color: #090B0B;
+  font-size: 129%;
+  padding: 16px 35px;
+  text-align: center;
+  align-content: center;
+  background-color: $peach-crayola;
+
+  &:hover {
+    border-bottom-width: 1px;
+    height: fit-content;
+    transition: 0.15s;
+  }
+}
+
+
+
+// .card-trip h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+// .card-trip p {
+//   font-size: 12px;
+//   opacity: .7;
+//   margin: 0;
+// }

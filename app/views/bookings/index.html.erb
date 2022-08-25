@@ -1,17 +1,24 @@
-<h1>All your booked experiences</h1>
-
-<ul>
-<% @bookings.each do |booking| %>
-  <%= link_to booking_path(booking) do %>
-    <li><%= booking.experience.title %></li>
-    <li><%= booking.experience.location %></li>
-    <li><%= booking.start_date.to_formatted_s(:short) %></li>
-    <li><%= booking.end_date.to_formatted_s(:short) %></li>
-  <% end %>
-  <%= link_to "Cancel your booking",
-        booking_path(booking),
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-      %>
-  <% end %>
+<div class="container text-center mb-5">
+  <h1>All your booked experiences</h1>
+  <% @bookings.each do |booking| %>
+    <div class="card-booked">
+      <%= link_to booking_path(booking) do %>
+        <div>
+          <%= cl_image_tag booking.experience.photo.key %>
+          <ul>
+            <li><%= booking.experience.title %></li>
+            <li><%= booking.experience.location %></li>
+            <li><%= booking.start_date.to_formatted_s(:short) %></li>
+            <li><%= booking.end_date.to_formatted_s(:short) %></li>
+          </ul>
+        </div>
+      <% end %>
+      <%= link_to "Cancel your booking",
+            booking_path(booking),
+            class:"btn-cancel",
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+          %>
+    </div>
+    <% end %>
   <br>
-</ul>
+</div>
