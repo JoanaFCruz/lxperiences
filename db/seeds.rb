@@ -48,8 +48,8 @@ sentido_proibido = {
   price: 3,
   user: users.sample}
 bolder = {
-  title: "Bolder in Ericeira",
-  description: "Open air boldering in Ericeira with a view",
+  title: "Bouldering in Ericeira",
+  description: "Open air bouldering in Ericeira with a view",
   location: "Ribamar, Lisboa",
   price: 20,
   user: users.sample}
