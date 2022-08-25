@@ -2,16 +2,15 @@
   <h3>Experience the best of Lisbon and region</h3>
 
   <div class="cards">
-    <% @experiences.each do |experience|%>
-
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <h2><strong><%= link_to experience.title, experience_path(experience) %></strong></h2>
-        <p><%= experience.location %></p>
-        <p><%= experience.price %> eur</p>
+    <%  @experiences.each do |experience|%>
+      <div class="card-product">
+          <%= cl_image_tag experience.photo.key %>
+          <div class="card-product-infos">
+            <h2><strong><%= link_to experience.title, experience_path(experience) %></strong></h2>
+            <p><%= experience.location %></p>
+            <p><%= experience.price %> EUR</p>
+          </div>
       </div>
-    </div>
     <% end %>
   </div>
 
