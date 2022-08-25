@@ -1,20 +1,18 @@
 <div class='page-top-margin'>
-  <h1>Our offers</h1>
+  <h3>Experience the best of Lisbon and region</h3>
 
-  <% @experiences.each do |experience|%>
+  <div class="cards">
+    <% @experiences.each do |experience|%>
 
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <h2><strong><%= link_to experience.title, experience_path(experience) %></strong></h2>
-      <p><%= experience.location %></p>
-      <p><%= experience.price %> eur</p>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2><strong><%= link_to experience.title, experience_path(experience) %></strong></h2>
+        <p><%= experience.location %></p>
+        <p><%= experience.price %> eur</p>
+      </div>
     </div>
-  </div>
-  <% end %>
-
-  <div>
-    <%= link_to "Add new experience", new_experience_path if policy(Experience).new? %>
+    <% end %>
   </div>
 
   <div style="width: 100%; height: 600px;"
