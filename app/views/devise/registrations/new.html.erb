@@ -22,6 +22,10 @@
           </div>
         </div>
           <%= f.input :dob,
+                      label: 'Date of birth',
+                      as: :date, start_year: Date.today.year - 100,
+                              end_year: Date.today.year - 18,
+                              order: [:day, :month, :year],
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "dob" }%>
