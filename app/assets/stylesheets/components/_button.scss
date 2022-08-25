@@ -1,0 +1,41 @@
+.btn-submit {
+  border-radius: 30px;
+  border-bottom-width: 5px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-color: #47321C;
+  color: #47321C;
+  font-size: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  align-content: center;
+
+  &:hover {
+    border-bottom-width: 1px;
+    height: fit-content;
+    transition: 0.15s;
+  }
+}
+
+
+.btn-back {
+  border-radius: 30px;
+  border-bottom-width: 5px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-color: #47321C;
+  color: #47321C;
+  font-size: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  align-content: center;
+  opacity: 0.5;
+
+  &:hover {
+    border-bottom-width: 1px;
+    height: fit-content;
+    transition: 0.15s;
+  }
+}

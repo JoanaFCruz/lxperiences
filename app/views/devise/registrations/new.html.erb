@@ -1,37 +1,57 @@
-<h2>Sign up</h2>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-4">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo:false}) do |f| %>
-  <%= f.error_notification %>
+      <h1 style="text-align: center;">Sign up</h1><br>
 
-  <div class="form-inputs">
-    <%= f.input :first_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "first-name" }%>
-    <%= f.input :last_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "last-name" }%>
-    <%= f.input :dob,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "dob" }%>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo:false}) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="row">
+          <div class="col-md-6">
+            <%= f.input :first_name,
+                        error: 'First name is mandatory, please specify one',
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "first-name" }%>
+          </div>
+          <div class="col-md-6">
+          <%= f.input :last_name,
+                      error: 'Last name is mandatory, please specify one',
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "last-name" }%>
+          </div>
+        </div>
+          <%= f.input :dob,
+                      label: 'Date of birth',
+                      as: :date, start_year: Date.today.year - 100,
+                              end_year: Date.today.year - 18,
+                              order: [:day, :month, :year],
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "dob" }%>
+          <%= f.input :email,
+                      error: 'A valid email is mandatory, please specify one',
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+                      error: 'A valid password is mandatory, please specify one',
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      required: true,
+                      input_html: { autocomplete: "new-password" } %>
+          <br>
+          <%= f.button :submit, "Sign up", class: "btn-submit" %>
+
+      <% end %>
+      <br>
+
+      <%= render "devise/shared/links" %>
+
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
