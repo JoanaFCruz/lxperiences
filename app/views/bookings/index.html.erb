@@ -1,25 +1,21 @@
 <div class="container mb-5">
-  <h1 class='text-center'>All your booked experiences</h1>
-  <div class="row">
-    <div class="col-sm-8">
-      <div class="row">
-        <% @bookings.each do |booking| %>
-          <div class="col-8">
-            <%= link_to booking_path(booking) do %>
-              <div class="card-booked">
-                <%= cl_image_tag booking.experience.photo.key, crop: :fill %>
-                <div class="card-booked-infos">
-                  <div>
-                    <h2><strong> <%= booking.experience.title %></strong></h2>
-                    <p><%= booking.start_date.to_formatted_s(:short) %></p>
-                    <p><%= booking.end_date.to_formatted_s(:short) %></p>
-                  </div>
-                </div>
+  <h1 class='text-center my-5'>All your booked experiences</h1>
+  <div class="row justify-content-center">
+    <% @bookings.each do |booking| %>
+      <div class="col-5 mx-5">
+        <%= link_to booking_path(booking) do %>
+          <div class="card-booked">
+            <%= cl_image_tag booking.experience.photo.key, crop: :fill %>
+            <div class="card-booked-infos">
+              <div>
+                <h2><strong> <%= booking.experience.title %></strong></h2>
+                <p><%= booking.start_date.to_formatted_s(:short) %></p>
+                <p><%= booking.end_date.to_formatted_s(:short) %></p>
               </div>
-            <% end %>
+            </div>
           </div>
         <% end %>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
