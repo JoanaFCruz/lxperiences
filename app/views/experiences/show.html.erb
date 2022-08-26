@@ -1,22 +1,16 @@
-<h4>LXperience</h4>
 
-<br>
+<div class="card center" style="width: 25rem; height: 34rem;">
+  <img src="<%=cl_image_path @experience.photo.key %>" class="card-img-top" alt="Experience photo">
+  <div class="card-body text-end">
+    <h3 class="card-title"><strong><%=@experience.title  %></strong></h3>
+    <p class="card-text"><%= @experience.description %></p>
+    <p class="card-text"><strong><%= @experience.location %></strong></p>
+    <p class="card-text"><%= @experience.price %> eur</p>
+    <a href="<%= new_experience_booking_path(@experience) %>" class="btn btn-primary">Book now</a>
+  </div>
+</div>
 
-<div>
-  <h2><strong><%=@experience.title  %></strong></h2>
-  <p><%= @experience.description %></p>
-  <p><%= @experience.location %></p>
-  <p><%= @experience.price %> eur</p>
-</div>
-<br>
-<div>
-<%= link_to "Book this experience", new_experience_booking_path(@experience) %>
-</div>
-<br>
+
 <div>
   <%= button_to "Delete this experience", @experience, method: :delete %>
-</div>
-
-<div>
-  <%= link_to "New experience", new_experience_path if policy(Experience).new? %>
 </div>
