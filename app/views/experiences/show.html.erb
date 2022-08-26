@@ -1,11 +1,11 @@
 
-<div class="card center" style="width: 25rem; height: 34rem;">
+<div class="card center" style="width: 25rem;">
   <img src="<%=cl_image_path @experience.photo.key %>" class="card-img-top" alt="Experience photo">
   <div class="card-body text-end">
     <h3 class="card-title"><strong><%=@experience.title  %></strong></h3>
     <p class="card-text"><%= @experience.description %></p>
     <p class="card-text"><strong><%= @experience.location %></strong></p>
-    <p class="card-text"><%= @experience.price %> eur</p>
+    <p class="card-text"><%= @experience.price %> EUR</p>
     <a href="<%= new_experience_booking_path(@experience) %>" class="btn btn-primary">Book now</a>
   </div>
 </div>
