@@ -78,10 +78,11 @@ speedboat = {
 }
 
 [torel_swimming_pool, sentido_proibido, jeep, bolder, speedboat].each do |attributes|
-  experience = Experience.create!(title: attributes[:title], description: attributes[:description], location: attributes[:location],
+  experience = Experience.new(title: attributes[:title], description: attributes[:description], location: attributes[:location],
                                   price: attributes[:price], user: attributes[:user])
   file = URI.open(attributes[:url])
   experience.photo.attach(io: file, filename: "experience.jpg", content_type: "image/jpg")
+  experience.save
 
   puts "Created #{experience.title}"
 end
