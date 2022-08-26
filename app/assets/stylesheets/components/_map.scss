@@ -1,10 +1,25 @@
 
 
 .mapboxgl-popup-content {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  background-color: #f8e8ba !important;
-  border: white 20px !important;
-  color: black !important;
-  border-radius: 50px;
+  text-align: centre;
+  font-family: 'Playfair Display', serif;
+  background-color: rgba(255, 255, 255, 0.767) !important;
+  color: rgba(0, 0, 0, 0.808) !important;
+  border-radius: 7px !important;
+  box-sizing: border-box;
+}
+
+.btn-map {
+  justify-content: end;
+}
+
+.mapboxgl-ctrl {
+  width: 100%;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.767) !important;
+  border: none;
+}
+
+.map-search-box p {
+  font-size: 16px;
 }

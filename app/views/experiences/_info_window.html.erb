@@ -1,6 +1,10 @@
-
-  <h2><%= link_to experience.title, new_experience_booking_path(experience) %></h2>
+<div class="map-search-box">
+  <h3><%= link_to experience.title, new_experience_booking_path(experience) %></h3>
+  <br>
   <p><strong><%= experience.location %></strong></p>
   <p><%= experience.description %></p>
-  <p><strong><%= experience.price %> EUR</strong></p>
-
+  <p><strong><%= experience.price %></strong> EUR</p>
+  <div class="btn-map">
+    <a href="<%= new_experience_booking_path(experience) %>" class="btn btn-submit">Book now</a>
+  </div>
+</div>
