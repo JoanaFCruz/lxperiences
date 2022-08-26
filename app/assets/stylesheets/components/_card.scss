@@ -16,4 +16,60 @@
   border-radius: 4px;
   opacity:80%;
   margin-bottom: 20px;
+  &:hover {
+    background-color: $orange (0, 100%, 100%, 0.0);
+    box-shadow: 0 0 15px $cafe-noir;
+  }
+}
+
+
+
+.card-booked {
+  margin-top: 20px;
+  overflow: hidden;
+  background: $cultured;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  &:hover {
+    background-color: $orange (0, 100%, 100%, 0.0);
+    box-shadow: 0 0 15px $cafe-noir;
+    p {
+      color: $cafe-noir;
+    }
+
+    h2 {
+      color: $cafe-noir;
+    }
+  }
+}
+
+.card-booked > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.card-booked h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 3px;
+  font-family: $headers-font;
+  color: $rich-black;
+  text-align: center;
+}
+
+.card-booked p {
+  font-size: 21px;
+  opacity: .7;
+  margin: 3px;
+  font-family: $body-font;
+  color: $rich-black;
+  text-align: center;
+}
+
+
+.card-booked .card-booked-infos {
+  padding: 16px;
+  height: 150px;
 }
