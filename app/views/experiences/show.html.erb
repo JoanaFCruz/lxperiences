@@ -14,7 +14,7 @@
 </div>
 <br>
 <div>
-  <%= button_to "Delete this experience", @experience, method: :delete %>
+  <%= button_to "Delete this experience", @experience, method: :delete if policy(@experience).destroy? %>
 </div>
 
 <div>
