@@ -28,7 +28,7 @@ class ExperiencesController < ApplicationController
     @experience.user = current_user
     authorize @experience
     if @experience.save
-      redirect_to @experience, notice: "Experience was created successfully"
+      redirect_to @experience, notice: "The experience was successfully created"
     else
       render :new, status: :unprocessable_entity
     end
@@ -44,6 +44,8 @@ class ExperiencesController < ApplicationController
 
   def destroy
     authorize @experience
+    @experience.destroy
+    redirect_to experiences_path, status: :see_other, notice: "The experience was successfully deleted"
   end
 
   private

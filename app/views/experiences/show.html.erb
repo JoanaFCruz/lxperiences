@@ -1,4 +1,3 @@
-
 <div class="card center" style="width: 25rem;">
   <img src="<%=cl_image_path @experience.photo.key %>" class="card-img-top" alt="Experience photo">
   <div class="card-body text-end">
@@ -9,8 +8,9 @@
     <a href="<%= new_experience_booking_path(@experience) %>" class="btn btn-primary">Book now</a>
   </div>
 </div>
+<br>
+
+<%= button_to "Delete this experience", @experience, method: :delete if policy(@experience).destroy? %>
 
 
-<div>
-  <%= button_to "Delete this experience", @experience, method: :delete %>
-</div>
+

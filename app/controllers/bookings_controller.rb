@@ -31,7 +31,7 @@ class BookingsController < ApplicationController
   def destroy
     authorize @booking
     @booking.destroy
-    redirect_to bookings_path, status: :see_other
+    redirect_to bookings_path, status: :see_other, notice: "The experience was successfully cancelled"
   end
 
   private
