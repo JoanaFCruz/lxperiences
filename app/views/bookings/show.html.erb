@@ -1,13 +1,20 @@
-<h1>Your booked experience</h1>
+<h1 class='text-center my-5'>Your booked experience</h1>
 
-<div>
-<h2><strong><%=@booking.experience.title  %></strong></h2>
-<p><%= @booking.experience.description %></p>
-<p><%= @booking.experience.location %></p>
-<p><%= @booking.experience.price %> EUR</p>
-<p><%= @booking.start_date.to_formatted_s(:short) %></p>
-<p><%= @booking.end_date.to_formatted_s(:short) %></p>
-<%= button_to "Cancel your booking", @booking, method: :delete if policy(@booking).destroy? %>
+<div class="card center" style="width: 30rem;">
+  <%= cl_image_tag @booking.experience.photo.key, class:"card-img-top", alt:"Experience photo" %>
+  <div class="card-body">
+    <div class='text-end'>
+      <h2><strong><%=@booking.experience.title  %></strong></h2>
+      <p><%= @booking.experience.description %></p>
+      <p><%= @booking.experience.location %></p>
+      <p><%= @booking.experience.price %> EUR</p>
+      <p><%= @booking.start_date.to_formatted_s(:short) %></p>
+      <p><%= @booking.end_date.to_formatted_s(:short) %></p>
+      <%= button_to "Cancel your booking", @booking, class: 'btn btn-submit', method: :delete if policy(@booking).destroy? %>
+    </div>
+  </div>
 </div>
+<br>
 
-<%= link_to "See all your bookings", bookings_path %>
+<%= link_to "See all your bookings", bookings_path, class: 'btn btn-submit' %>
+<%= link_to "More experiences", experiences_path, class: 'btn btn-submit' %>

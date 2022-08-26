@@ -24,10 +24,32 @@
   }
 }
 
+.center {
+  margin: 20px auto;
+  border-radius: 10px;
+  // height: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
 
+.card-img-top {
+  border-radius: 10px 10px 0px 0px;
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  margin-top: 25px;
+}
+.card-content {
+  position:absolute;
+  bottom: 10px;
+  right: 20px;
+}
 
 .card-booked {
   margin-top: 20px;
+  padding: 2px;
   overflow: hidden;
   background: $cultured;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -46,19 +68,7 @@
 }
 
 .card-booked > img {
-  height: 200px;
-}
-
-.center {
-  margin: 20px auto;
-  border-radius: 10px;
-  // border-width: 2px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);
-}
-
-.card-img-top {
-  border-radius: 10px 10px 0px 0px;
-  height: 350px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
 }
@@ -86,13 +96,3 @@
   padding: 16px;
   height: 150px;
  }
-
-.card-body {
-  margin-top: 25px;
-}
-
-.card-content {
-  position:absolute;
-  bottom: 10px;
-  right: 20px;
-}
