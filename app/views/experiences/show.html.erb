@@ -1,14 +1,28 @@
-<div class="card center" style="width: 25rem;">
-  <img src="<%=cl_image_path @experience.photo.key %>" class="card-img-top" alt="Experience photo">
-  <div class="card-body text-end">
-    <h3 class="card-title"><strong><%=@experience.title  %></strong></h3>
-    <p class="card-text"><%= @experience.description %></p>
-    <p class="card-text"><strong><%= @experience.location %></strong></p>
-    <p class="card-text"><%= @experience.price %> EUR</p>
-    <a href="<%= new_experience_booking_path(@experience) %>" class="btn btn-submit">Book now</a>
+<div class="container mt-3">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+
+      <div class="card center" style="width: 25rem;">
+        <%= cl_image_tag @experience.photo.key, class:"card-img-top", alt:"Experience photo" %>
+        <div class="card-body text-end">
+          <h3 class="card-title"><strong><%=@experience.title  %></strong></h3>
+          <p class="card-text"><%= @experience.description %></p>
+          <p class="card-text"><strong><%= @experience.location %></strong></p>
+          <p class="card-text"><%= @experience.price %> EUR</p>
+          <a href="<%= new_experience_booking_path(@experience) %>" class="btn btn-submit">Book now</a>
+        </div>
+      </div>
+      <br>
+
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <%= link_to "Delete this experience", experience_path(@experience), data: { turbo_method: :delete, turbo_confirm: "are you sure?" },  class: "btn btn-back" if policy(@experience).destroy? %>
+      </div>
+      <div class="col-md-6 text-center">
+        <%= link_to "Back to experiences", experiences_path, class: 'btn btn-submit' %>
+      </div>
+    </div>
+
+    </div>
   </div>
 </div>
-<br>
-
-<%= button_to "Delete this experience", @experience, method: :delete if policy(@experience).destroy? %>
-<%= link_to "Back to experiences", experiences_path, class: 'btn btn-submit' %>
