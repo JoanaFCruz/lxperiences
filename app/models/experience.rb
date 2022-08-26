@@ -2,7 +2,7 @@ class Experience < ApplicationRecord
   belongs_to :user
   has_many :bookings, dependent: :destroy
 
-  validates :title, :description, :location, :price, presence: true
+  validates :title, :description, :location, :price, :photo, presence: true
   validates :title, uniqueness: true
 
   geocoded_by :location
