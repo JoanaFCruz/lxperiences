@@ -39,3 +39,25 @@
     transition: 0.15s;
   }
 }
+
+
+.btn-cancel {
+  border-radius: 30px;
+  border-bottom-width: 5px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-color: #47321C;
+  color: #47321C;
+  font-size: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  align-content: center;
+  align-items: right;
+
+  &:hover {
+    border-bottom-width: 1px;
+    height: fit-content;
+    transition: 0.15s;
+  }
+}
