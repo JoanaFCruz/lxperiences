@@ -1,7 +1,7 @@
 <div class='page-top-margin'>
   <div class="container-fluid">
     <div class="index-heading">
-      <h3>Experience the best of Lisbon and region</h3>
+      <h1 class="text-center">Experience the best of Lisbon and region</h1><br>
     </div>
 
     <div class="row">
@@ -10,10 +10,12 @@
           <% @experiences.each do |experience| %>
             <div class="col-6">
               <%= link_to experience_path(experience) do %>
-                <div class="card-index justify-content" style='background-image: url(<%= cl_image_path experience.photo.key, crop: :fill %>)'>
-                  <h2 class><strong><%= experience.title %></strong></h2>
-                  <p><%= experience.location %></p>
-                  <p><%= experience.price %> EUR</p>
+                <div class="card-index" style='background-image: linear-gradient(rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url(<%= cl_image_path experience.photo.key, crop: :fill %>)'>
+                  <div class="card-content">
+                    <h2 class><strong><%= experience.title %></strong></h2>
+                    <p><%= experience.location %></p>
+                    <p><%= experience.price %> EUR</p>
+                  </div>
                 </div>
               <% end %>
             </div>
