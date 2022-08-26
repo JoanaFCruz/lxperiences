@@ -14,9 +14,28 @@
   padding: 10px;
   border-color: #f1e3d5;
   border-radius: 4px;
-  opacity:80%;
+  opacity:70%;
   margin-bottom: 20px;
   position: relative;
+  text-align: end;
+}
+
+.center {
+  margin: 20px auto;
+  border-radius: 10px;
+  border-width: 2px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.card-img-top {
+  border-radius: 10px;
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  margin-top: 25px;
 }
 
 .card-content {
