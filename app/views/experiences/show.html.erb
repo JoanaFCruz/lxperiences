@@ -5,12 +5,10 @@
     <p class="card-text"><%= @experience.description %></p>
     <p class="card-text"><strong><%= @experience.location %></strong></p>
     <p class="card-text"><%= @experience.price %> EUR</p>
-    <a href="<%= new_experience_booking_path(@experience) %>" class="btn btn-primary">Book now</a>
+    <a href="<%= new_experience_booking_path(@experience) %>" class="btn btn-submit">Book now</a>
   </div>
 </div>
 <br>
 
 <%= button_to "Delete this experience", @experience, method: :delete if policy(@experience).destroy? %>
-
-
-
+<%= link_to "Back to experiences", experiences_path, class: 'btn btn-submit' %>
