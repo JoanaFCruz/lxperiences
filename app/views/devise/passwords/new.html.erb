@@ -1,18 +1,38 @@
-<h2>Forgot your password?</h2>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-4">
+      <h1 style="text-align: center;">Forgot your password?</h1><br>
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+          <div class="form-inputs">
+            <%= f.input :email,
+                        error: 'A valid email is mandatory, please specify one',
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Send me reset password instructions", class: "btn-submit" %>
+          </div>
+        <% end %>
+        <br>
+
+        <div class="row">
+          <div class="col-md-6">
+            <%- if controller_name != 'sessions' %>
+              <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-submit" %><br />
+            <% end %>
+          </div>
+          <div class="col-md-6 text-end">
+            <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+              <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-submit" %><br />
+            <% end %>
+          </div>
+        </div>
+
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
